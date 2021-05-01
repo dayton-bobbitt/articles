@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "web-component-helpers",
+  "scripts": {
+    "postinstall": "lerna bootstrap --hoist --strict"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
