@@ -1,8 +1,8 @@
 **Web Components**
-# Overriding LitElement's naming convention for attributes
+# Generating attributes for LitElement properties
 **Streamline your code with a custom implementation of LitElement's createProperty method**
 
-_This guide explains how you can override parts of the LitElement API to simplify your Web Components._
+_This guide explains how you can streamline your Web Component code by overriding parts of the LitElement API to generate attributes using any naming convention._
 
 ## Introduction to LitElement properties and attributes
 A [LitElement property](https://lit-element.polymer-project.org/guide/properties#overview) is a JavaScript class property that is observed by LitElement. Whenever the value of a LitElement property changes, the [update lifecycle](https://lit-element.polymer-project.org/guide/lifecycle#overview) will run to determine if the component needs to render.
