@@ -9,37 +9,27 @@ A [LitElement property](https://lit-element.polymer-project.org/guide/properties
 
 An [observed attribute](https://lit-element.polymer-project.org/guide/properties#observed-attributes) is created for each LitElement property, and the attribute will have the same name as the property, in lowercase, if its name is not provided. 
 
-```markdown
-Example of default behavior
-```
+<script src="https://gist.github.com/dayton-bobbitt/05759da77dd513f25d231cf124e4b5a6.js"></script>
 
-You may find yourself defining multi-word properties such as `propOne` above. This property is easy to read in camelCase but difficult to read as the lowercase attribute `propone`. For such properties, you can greatly improve the readability of the attribute by naming it explicitly using a different convention, such as kebab-case.
+You may find yourself defining multi-word properties such as `propOne` above. This property is easy to read in camelCase but difficult to read as the lowercase attribute `propone`. For such properties, you can improve the readability of the attribute by naming it explicitly using a different convention, such as kebab-case.
 
-```markdown
-Example of explicitly naming `propOne` and `propTwo` as `prop-one` and `prop-two`, respectively.
-```
+<script src="https://gist.github.com/dayton-bobbitt/cd0c235907eaee8fad6efbb542337bbb.js"></script>
 
 ## Overriding LitElement's createProperty method
 
 Explicitly naming attributes improves readability at the cost of maintainability. By specifying a name for the LitElement property and its attribute, you run the risk of renaming one without renaming the other.
 
-```markdown
-Example of `propOne` and its attribute having different names
-```
+<script src="https://gist.github.com/dayton-bobbitt/becad2b8a96196e0fb520bbb90ca4ff4.js"></script>
 
 [LitElement's createProperty method](https://lit-element.polymer-project.org/api/classes/_lib_updating_element_.updatingelement.html#createproperty) can be overwritten to eliminate this risk and allow you to write less code (win-win!). The `createProperty` method is automatically called once for each property and is a great place to generate attribute names using any naming convention.
 
-```markdown
-Example of overriding the createProperty method to generate attribute names using kebab-case
-```
+<script src="https://gist.github.com/dayton-bobbitt/ea52024335c1a674233810c8caf9e9d0.js"></script>
 
 ## Sharing the love
 
 Overriding LitElement's `createProperty` method is an easy way to simplify your code and make it less error-prone. But what if you are building multiple Web Components with LitElement? In this case, you can override the `createProperty` method within a base class or as a mixin so that your entire component library can benefit.
 
-```markdown
-Embed working demo from Stackblitz
-```
+<script src="https://stackblitz.com/edit/deriving-lit-element-attributes?embed=1&file=src%2Fmixins%2Fkebab-case-attributes.ts&hideNavigation=1"></script>
 
 ---
 
