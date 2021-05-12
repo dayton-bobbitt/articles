@@ -7,7 +7,7 @@ _This guide explains how you can override parts of the LitElement API to simplif
 ## Introduction to LitElement properties and attributes
 A [LitElement property](https://lit-element.polymer-project.org/guide/properties#overview) is a JavaScript class property that is observed by LitElement. Whenever the value of a LitElement property changes, the [update lifecycle](https://lit-element.polymer-project.org/guide/lifecycle#overview) will run to determine if the component needs to render.
 
-An [observed attribute](https://lit-element.polymer-project.org/guide/properties#observed-attributes) is created for each LitElement property, and the attribute will have the same name as the property but in lowercase if its name is not provided. 
+An [observed attribute](https://lit-element.polymer-project.org/guide/properties#observed-attributes) is created for each LitElement property, and the attribute will have the same name as the property, in lowercase, if its name is not provided. 
 
 ```markdown
 Example of default behavior
@@ -35,7 +35,7 @@ Example of overriding the createProperty method to generate attribute names usin
 
 ## Sharing the love
 
-Overriding LitElement's `createProperty` method is an easy way to simplify your code and make it less error prone. But what if you are building multiple Web Components with LitElement? In this case, you can override the `createProperty` method within a base class or as a mixin so that your entire component library can benefit.
+Overriding LitElement's `createProperty` method is an easy way to simplify your code and make it less error-prone. But what if you are building multiple Web Components with LitElement? In this case, you can override the `createProperty` method within a base class or as a mixin so that your entire component library can benefit.
 
 ```markdown
 Embed working demo from Stackblitz
@@ -43,4 +43,4 @@ Embed working demo from Stackblitz
 
 ---
 
-_I hope this guide was a valuable introduction to how you can override parts of the LitElement API to simplify your Web Complements. Please leave a commentt or [reach out to me on Twitter](https://twitter.com/DaytonBobbitt) if you have any questions!_
+_I hope this guide was a valuable introduction to how you can override parts of the LitElement API to simplify your Web Complements. Please leave a comment or [reach out to me on Twitter](https://twitter.com/DaytonBobbitt) if you have any questions!_
