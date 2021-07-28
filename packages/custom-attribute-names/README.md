@@ -1,3 +1,5 @@
+> NOTE: this is a rough draft of [tthis article published on Medium](https://medium.com/@dayton-bobbitt/generating-attributes-for-litelement-properties-f972ef658137).
+
 **Web Components**
 # Generating attributes for LitElement properties
 **Streamline your code with a custom implementation of LitElement's createProperty method**
