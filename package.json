@@ -1,10 +1,24 @@
 {
-  "private": true,
-  "name": "web-component-helpers",
-  "scripts": {
-    "postinstall": "lerna bootstrap --hoist --strict"
+  "name": "articles",
+  "version": "1.0.0",
+  "description": "Source for my unpublished blog",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dayton-bobbitt/articles.git"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-html": "^7.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4"
+  },
+  "lint-staged": {
+    "*.js,*.html": "eslint --cache --fix",
+    "*.{js,css,md,html}": "prettier --write"
+  },
+  "scripts": {
+    "prepare": "husky install"
   }
 }
